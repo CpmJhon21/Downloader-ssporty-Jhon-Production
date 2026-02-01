@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
 </head>
 <body>
     <!-- Header & Navigation -->
@@ -43,23 +44,65 @@
                 <h2>Download Songs, Playlists, Albums & Artist Songs from Spotify</h2>
                 
                 <div class="download-section">
-                    <div class="input-group">
-                        <input type="text" id="spotifyUrl" placeholder="Paste Spotify URL or search song, artist, album...">
-                        <button class="paste-btn" id="pasteBtn">
-                            <i class="fas fa-paste"></i> Paste
-                        </button>
-                        <button class="download-btn" id="downloadBtn">
-                            <i class="fas fa-download"></i> Download
-                        </button>
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="url-tab">Paste URL</button>
+                        <button class="tab-btn" data-tab="search-tab">Search</button>
                     </div>
+                    
+                    <div class="tab-content active" id="url-tab">
+                        <div class="input-group">
+                            <input type="text" id="spotifyUrl" placeholder="Paste Spotify URL here...">
+                            <button class="paste-btn" id="pasteBtn">
+                                <i class="fas fa-paste"></i> Paste
+                            </button>
+                            <button class="download-btn" id="downloadBtn">
+                                <i class="fas fa-download"></i> Download
+                            </button>
+                        </div>
+                        <div class="url-examples">
+                            <p>Contoh URL Spotify:</p>
+                            <div class="example-links">
+                                <span class="example-link" data-url="https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT">Lagu</span>
+                                <span class="example-link" data-url="https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M">Playlist</span>
+                                <span class="example-link" data-url="https://open.spotify.com/album/6DEjYFkNZh67HP7R9PSZvv">Album</span>
+                                <span class="example-link" data-url="https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02">Artist</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="search-tab">
+                        <div class="input-group">
+                            <input type="text" id="searchQuery" placeholder="Search by song name, lyrics, artist, or movie...">
+                            <button class="search-btn" id="searchBtn">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                        <div class="search-examples">
+                            <p>Contoh pencarian:</p>
+                            <div class="example-search">
+                                <span class="search-example" data-query="Shape of You Ed Sheeran">"Shape of You"</span>
+                                <span class="search-example" data-query="Blinding Lights Weeknd">"Blinding Lights"</span>
+                                <span class="search-example" data-query="Bad Guy Billie Eilish">"Bad Guy"</span>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="search-note">
-                        <i class="fas fa-search"></i> You can also search by song name, lyrics, artist, or movie
+                        <i class="fas fa-info-circle"></i> Anda juga dapat mencari berdasarkan nama lagu, lirik, artis, atau film
+                    </div>
+                </div>
+                
+                <!-- Results Section -->
+                <div class="results-section" id="resultsSection">
+                    <h3>Hasil Pencarian</h3>
+                    <div class="results-container" id="resultsContainer">
+                        <!-- Results will be displayed here -->
                     </div>
                 </div>
                 
                 <div class="alert">
                     <i class="fas fa-exclamation-circle"></i>
-                    <span>Facing issues? <a href="#">Contact Us</a></span>
+                    <span>Facing issues? <a href="#" id="contactLink">Contact Us</a></span>
                 </div>
                 
                 <div class="support-notice">
@@ -240,6 +283,16 @@
                         <p>The website is compatible with various devices, including mobile phones, tablets, laptops, and PC. You can use Spotdown on Mac OS, Windows, Android, iOS, and Linux. Spotdown can be accessed on any type of browser, such as Chrome, Safari, Opera, Chromium, Firefox, etc.</p>
                     </div>
                 </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How to download Spotify songs using Spotdown search functionality?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Spotdown comes with various latest and unique features, and its search functionality is one of them. Now, you don't need to copy and paste the Spotify song URL to download it. You can easily find and download your favorite songs by searching for them. It is very easy to use this new feature, just search for a song by its name, lyrics, artist, or movie and download it on your device.</p>
+                    </div>
+                </div>
             </div>
             
             <div class="last-updated">
@@ -255,6 +308,9 @@
                         <li>Dark mode is added to UI</li>
                         <li>Version updated to 1.32</li>
                         <li>Improved audio quality to 320kbps</li>
+                        <li>Enhanced search functionality with fuzzy matching</li>
+                        <li>Support for downloading entire artist profile songs</li>
+                        <li>ID3 tags automatically added to all MP3 files</li>
                     </ul>
                 </div>
             </div>
@@ -273,10 +329,10 @@
                     Spotdown is an online Spotify downloader that allows users to download Spotify songs, playlists, albums, and artists for free. It does not matter what device you are using, you can easily access this website on any device.
                 </p>
                 <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Support</a>
+                    <a href="#" id="privacyLink">Privacy Policy</a>
+                    <a href="#" id="termsLink">Terms of Service</a>
+                    <a href="#" id="contactLink2">Contact Us</a>
+                    <a href="#" id="supportLink">Support</a>
                 </div>
                 <p class="copyright">© 2026 Spotdown. All rights reserved.</p>
             </div>
@@ -319,11 +375,44 @@
                 </div>
                 <div class="download-details">
                     <p id="downloadFileName">Processing your request...</p>
-                    <p class="download-quality">Quality: 320kbps MP3</p>
+                    <p class="download-quality" id="downloadQuality">Quality: 320kbps MP3</p>
+                    <div class="download-info">
+                        <i class="fas fa-info-circle"></i>
+                        <span>File akan otomatis terdownload setelah proses selesai</span>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button class="btn-cancel" id="cancelDownload">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Contact Us</h3>
+                <button class="close-modal" id="closeContactModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" placeholder="Describe your issue or inquiry..." rows="4"></textarea>
+                    </div>
+                    <button class="submit-btn" id="submitContact">Submit</button>
+                </div>
             </div>
         </div>
     </div>
