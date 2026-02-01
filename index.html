@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotdown - Spotify Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <i class="fas fa-music"></i>
+                    <span>Spotdown</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#benefits">Benefits</a>
+                    <a href="#faq">FAQ</a>
+                    <button class="dark-mode-toggle" id="darkModeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Spotify Downloader</h1>
+                <h2>Download Songs, Playlists, Albums & Artist Songs from Spotify</h2>
+                
+                <div class="download-section">
+                    <div class="input-group">
+                        <input type="text" id="spotifyUrl" placeholder="Paste Spotify URL or search song, artist, album...">
+                        <button class="paste-btn" id="pasteBtn">
+                            <i class="fas fa-paste"></i> Paste
+                        </button>
+                        <button class="download-btn" id="downloadBtn">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                    </div>
+                    <div class="search-note">
+                        <i class="fas fa-search"></i> You can also search by song name, lyrics, artist, or movie
+                    </div>
+                </div>
+                
+                <div class="alert">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Facing issues? <a href="#">Contact Us</a></span>
+                </div>
+                
+                <div class="support-notice">
+                    <i class="fas fa-heart"></i>
+                    <span>Please consider supporting Spotdown to keep it alive.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How to Download from Spotify?</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Copy the Spotify URL</h3>
+                        <p>Firstly, open the Spotify app on your device or the Spotify website. Now, copy the URL of your favorite song, playlist, album, or artist that you want to download.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Paste the URL</h3>
+                        <p>Go back to the Spotdown website, which is an online Spotify downloader tool. Now, paste the copied link in the input field that is provided above. You can also use the paste button to paste the URL.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Click Download</h3>
+                        <p>Simply hit the download button, and you will get your favorite song, playlist, album, or artist as a result. Now, choose any song from the results and hit the Get Link button to download it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Spotify Downloader Features</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Track Downloader</h3>
+                    <p>If you are looking for a tool that can download your favorite Spotify tracks or songs then you can use the track downloader of Spotdown.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <h3>Playlist Downloader</h3>
+                    <p>If you want to download a complete playlist at once, then don't worry, here is the best playlist downloader.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-compact-disc"></i>
+                    </div>
+                    <h3>Album Downloader</h3>
+                    <p>Spotdown has a lot of features, and the album downloader is one of them. With this Spotify album downloader, you can download your favorite albums.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Artist Downloader</h3>
+                    <p>Artist downloader is one of the best features of this Spotify downloader website. Spotdown also provides access to download songs of any artist.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Download by Search</h3>
+                    <p>Now, let's talk about the best feature of this new Spotify song downloader, it is the searching functionality of the website.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Song Downloader</h3>
+                    <p>If you want to download any type of Spotify song, then use this song downloader. This downloader provides access to download any type of song for free.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Benefits of Spotdown Spotify Song Downloader</h2>
+            
+            <div class="benefits-content">
+                <div class="benefit">
+                    <h3><i class="fas fa-bolt"></i> Fast Downloading</h3>
+                    <p>This Spotify song downloader provides high-speed downloads of Spotify songs. You can easily convert Spotify to MP3 with ultra-fast speed using its optimized servers.</p>
+                </div>
+                
+                <div class="benefit">
+                    <h3><i class="fas fa-star"></i> High Quality</h3>
+                    <p>You can download Spotify songs with their original quality. Using this online downloader, you can easily get your favorite songs at a bitrate of 320 kbps.</p>
+                </div>
+                
+                <div class="benefit">
+                    <h3><i class="fas fa-shield-alt"></i> Security</h3>
+                    <p>This Spotify mp3 downloader is completely safe and secure. So you don't need to worry about your safety while using our website. Your safety is our topmost priority.</p>
+                </div>
+                
+                <div class="benefit">
+                    <h3><i class="fas fa-infinity"></i> Free & No Limit</h3>
+                    <p>It is a completely free online Spotify downloader. Using this tool, you can download any type of song with high quality and fast speed for free of cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions (FAQ)</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is Spotdown safe and free to use?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, Spotdown is completely safe and free to use. You can convert unlimited Spotify songs using it for free. The website is fully secured, so don't worry about your safety while using our website.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Why Spotdown is better than other Spotify downloaders available?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Many reasons make Spotdown better than other available Spotify downloaders. One of the main reasons is the search functionality of the website. You don't need to copy and paste the Spotify URL every time. Just use the searching functionality of Spotdown and search songs by their name, lyrics, artist, movie, etc.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How to use Spotify song downloader?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It is very easy to use this Spotify song downloader. You can follow the below steps to download songs on your device.</p>
+                        <ul>
+                            <li>Copy the Spotify song URL.</li>
+                            <li>Paste the URL in the text field or search song by using its name, lyrics, artist, movie, etc.</li>
+                            <li>Now, click on the download button.</li>
+                            <li>Enjoy listening to your favorite song.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Which devices are compatible with Spotdown Downloader?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The website is compatible with various devices, including mobile phones, tablets, laptops, and PC. You can use Spotdown on Mac OS, Windows, Android, iOS, and Linux. Spotdown can be accessed on any type of browser, such as Chrome, Safari, Opera, Chromium, Firefox, etc.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="last-updated">
+                <h3>Last Updated: February, 2026</h3>
+                <div class="changelog">
+                    <h4>Changelogs</h4>
+                    <ul>
+                        <li>All Spotify downloaders (Track, playlist, album, artist, mp3) are added</li>
+                        <li>We have released a Major Update on August 24, 2025</li>
+                        <li>Added - Spotify podcast downloader</li>
+                        <li>Added - Spotify episode downloader</li>
+                        <li>Added - Spotify search downloader</li>
+                        <li>Dark mode is added to UI</li>
+                        <li>Version updated to 1.32</li>
+                        <li>Improved audio quality to 320kbps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-music"></i>
+                    <span>Spotdown</span>
+                </div>
+                <p class="footer-description">
+                    Spotdown is an online Spotify downloader that allows users to download Spotify songs, playlists, albums, and artists for free. It does not matter what device you are using, you can easily access this website on any device.
+                </p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Support</a>
+                </div>
+                <p class="copyright">© 2026 Spotdown. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <button class="close-mobile-menu" id="closeMobileMenu">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#home" class="mobile-menu-link">Home</a>
+            <a href="#features" class="mobile-menu-link">Features</a>
+            <a href="#benefits" class="mobile-menu-link">Benefits</a>
+            <a href="#faq" class="mobile-menu-link">FAQ</a>
+            <div class="mobile-dark-mode">
+                <span>Dark Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="mobileDarkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Progress Modal -->
+    <div class="modal-overlay" id="downloadModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Downloading...</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <div class="progress-text" id="progressText">0%</div>
+                </div>
+                <div class="download-details">
+                    <p id="downloadFileName">Processing your request...</p>
+                    <p class="download-quality">Quality: 320kbps MP3</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancelDownload">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
