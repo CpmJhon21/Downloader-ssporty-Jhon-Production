@@ -6,16 +6,10 @@
     <title>Spotify Downloader - Premium Quality</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="https://www.spotify.com/favicon.ico">
 </head>
 <body>
 
     <div class="grid-bg"></div>
-    <div class="spotify-bg-elements">
-        <div class="music-note"><i class="fas fa-music"></i></div>
-        <div class="music-note"><i class="fas fa-headphones"></i></div>
-        <div class="music-note"><i class="fas fa-play-circle"></i></div>
-    </div>
 
     <div class="container">
         
@@ -25,86 +19,47 @@
                 <i class="fab fa-spotify logo-spin"></i>
                 <h2>Spotify <span>Downloader</span></h2>
                 <p>High-quality MP3 streaming & download</p>
-                <div class="badge">Premium Quality</div>
             </div>
 
-            <div id="view-input" class="view fade-in">
+            <div id="view-input" class="fade-in">
                 <div class="input-box">
                     <i class="fas fa-link"></i>
-                    <input type="text" id="spotifyUrl" placeholder="Paste Spotify track link here...">
-                    <button class="clear-btn" id="clearBtn"><i class="fas fa-times"></i></button>
-                </div>
-                <div class="url-example">
-                    <small>Example: https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT</small>
+                    <input type="text" id="spotifyUrl" placeholder="Paste Spotify track link...">
                 </div>
                 <button id="searchBtn" class="action-btn">
-                    <i class="fas fa-bolt"></i> Process & Download
+                    <i class="fas fa-bolt"></i> Download Music
                 </button>
             </div>
 
-            <div id="view-loading" class="view hidden">
+            <div id="view-loading" class="hidden">
                 <div class="loader-container">
-                    <div class="spotify-pulse">
-                        <i class="fab fa-spotify"></i>
-                    </div>
-                    <h3>Processing Your Track...</h3>
-                    <p>Fetching metadata and preparing download</p>
-                    <div class="loading-bar">
-                        <div class="loading-progress"></div>
-                    </div>
+                    <div class="spotify-pulse"></div>
+                    <h3>Processing...</h3>
+                    <p>Fetching your track data</p>
                 </div>
             </div>
 
-            <div id="view-result" class="view hidden">
+            <div id="view-result" class="hidden">
                 <div class="track-card">
-                    <div class="album-art-container">
-                        <img id="albumArt" src="" alt="Album Art" class="track-img">
-                        <div class="album-overlay">
-                            <i class="fas fa-play"></i>
-                        </div>
-                    </div>
+                    <img id="albumArt" src="" alt="Album Art" class="track-img">
                     
                     <div class="track-details">
-                        <h3 id="trackTitle">Track Title</h3>
-                        <p id="artistName">Artist Name</p>
-                        <div class="track-meta">
-                            <span><i class="fas fa-clock"></i> <span id="durationTxt">--:--</span></span>
-                            <span><i class="fas fa-database"></i> <span id="qualityTxt">HQ</span></span>
-                        </div>
+                        <h3 id="trackTitle">Loading...</h3>
+                        <p id="artistName">Loading...</p>
                     </div>
 
                     <div class="meta-tags">
-                        <span class="tag"><i class="fas fa-music"></i> <span>MP3</span></span>
-                        <span class="tag green-tag"><i class="fas fa-star"></i> <span>320kbps</span></span>
-                        <span class="tag blue-tag"><i class="fas fa-download"></i> <span>Ready</span></span>
+                        <span class="tag"><i class="fas fa-music"></i> <span id="durationTxt">MP3</span></span>
+                        <span class="tag green-tag"><i class="fas fa-star"></i> <span id="sizeTxt">High Q</span></span>
                     </div>
 
-                    <button id="finalDownloadBtn" class="download-confirm-btn">
+                    <button id="finalDownloadBtn" class="download-confirm-btn" style="width:100%; border:none; cursor:pointer;">
                         <i class="fas fa-download"></i> Download MP3
                     </button>
                     
-                    <div class="file-info">
-                        <i class="fas fa-file-audio"></i>
-                        <span id="fileName">music.mp3</span>
-                        <span class="file-size" id="fileSize">~5 MB</span>
-                    </div>
-                    
                     <div class="reset-area">
-                        <button id="resetBtn" class="reset-btn">
-                            <i class="fas fa-redo"></i> Download Another Track
-                        </button>
+                        <button id="resetBtn">Download another</button>
                     </div>
-                </div>
-            </div>
-
-            <div id="view-error" class="view hidden">
-                <div class="error-container">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <h3>Oops! Something Went Wrong</h3>
-                    <p id="errorMessage">Unable to process the Spotify link</p>
-                    <button id="retryBtn" class="action-btn">
-                        <i class="fas fa-redo"></i> Try Again
-                    </button>
                 </div>
             </div>
         </div>
@@ -112,23 +67,19 @@
         <div class="features-grid">
             <div class="feature-item">
                 <div class="icon-circle"><i class="fas fa-bolt"></i></div>
-                <h4>Super Fast</h4>
-                <p>Instant processing</p>
+                <span>Super Fast</span>
             </div>
             <div class="feature-item">
                 <div class="icon-circle"><i class="fas fa-shield-alt"></i></div>
-                <h4>Secure</h4>
-                <p>No data stored</p>
+                <span>Secure</span>
             </div>
             <div class="feature-item">
                 <div class="icon-circle"><i class="fas fa-star"></i></div>
-                <h4>High Quality</h4>
-                <p>320kbps MP3</p>
+                <span>High Quality</span>
             </div>
             <div class="feature-item">
                 <div class="icon-circle"><i class="fas fa-mobile-alt"></i></div>
-                <h4>Responsive</h4>
-                <p>Works on all devices</p>
+                <span>Responsive</span>
             </div>
         </div>
 
@@ -137,53 +88,24 @@
             <div class="steps">
                 <div class="step">
                     <span class="step-num">1</span>
-                    <div>
-                        <h4>Open Spotify</h4>
-                        <p>Copy the track link from Spotify app or web</p>
-                    </div>
+                    <p>Open Spotify App & Copy Link</p>
                 </div>
                 <div class="step">
                     <span class="step-num">2</span>
-                    <div>
-                        <h4>Paste Link</h4>
-                        <p>Paste the link in the box above</p>
-                    </div>
+                    <p>Paste Link in the box above</p>
                 </div>
                 <div class="step">
                     <span class="step-num">3</span>
-                    <div>
-                        <h4>Download</h4>
-                        <p>Click download and save your MP3</p>
-                    </div>
+                    <p>Click Download & Save MP3</p>
                 </div>
             </div>
-        </div>
-
-        <div class="notice-box">
-            <i class="fas fa-info-circle"></i>
-            <p>This tool is for personal use only. Please respect copyright laws.</p>
         </div>
 
         <div class="footer">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fab fa-spotify"></i>
-                    <span>Spotify Downloader</span>
-                </div>
-                <div class="footer-links">
-                    <a href="#" class="footer-link">Privacy</a>
-                    <a href="#" class="footer-link">Terms</a>
-                    <a href="#" class="footer-link">Contact</a>
-                </div>
-                <div class="copyright">
-                    © 2024 Spotify Downloader Tool
-                </div>
-            </div>
+            SANN404 FORUM
         </div>
 
     </div>
-
-    <div class="toast" id="toast"></div>
 
     <script src="script.js"></script>
 </body>
